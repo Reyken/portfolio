@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 500;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+.background {
+    background-image: url("assets/WAC.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.catchphrase {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.catchphrase h1 {
+    font-size: 82px;
+    line-height: 1;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.catchphrase p {
+    font-size: 24px;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    padding: 18px 36px;
+    background-color: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #333333;
+}
+
+.projects {
+    padding: 100px 40px;
+}
+
+.section-title {
+    font-size: 48px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+}
+
+.project-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #111111;
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.contact, .about {
+    padding: 100px 40px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.contact h2, .about h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.contact p, .about p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: #111111;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #333333;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 15px 20px;
+    }
+    
+    .catchphrase h1 {
+        font-size: 48px;
+    }
+    
+    .catchphrase p {
+        font-size: 18px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+}
